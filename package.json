@@ -1,0 +1,35 @@
+{
+  "name": "github-automation-assessment",
+  "version": "1.0.0",
+  "description": "GitHub Full-Stack QA Automation Framework using Playwright",
+  "type": "module",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:auth": "playwright test test_authentication.spec.js --project=chromium",
+    "test:ui": "playwright test test_ui_operations.spec.js --project=chromium",
+    "test3": "playwright test test-1.spec.ts --project=chromium",
+    "test:api": "playwright test test_api_operations.spec.js --project=chromium",
+    "test:cross": "playwright test test_cross_platform.spec.js --project=chromium",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:mobile": "playwright test --project=mobile",
+    "test:report": "playwright show-report",
+    "test:debug": "playwright test --debug",
+    "cleanup": "node cleanup-test-repos.js",
+    "setup": "bash setup.sh",
+    "verify": "node verify-setup.js"
+  },
+  "keywords": ["playwright", "automation", "qa", "github", "testing"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "winston": "^3.11.0"
+  }
+}
